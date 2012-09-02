@@ -1,1 +1,21 @@
-<<L10 grammar (AST with SVG semantics) here>>
+INPUT
+<<L9 grammar here>>
+
+OUTPUT
+
+The output of l13c is a file of the form:
+
+   TextPool [TextNode]
+
+   TextNode {
+       id: String
+       class: String
+       text: String
+       col: int
+       ln: int
+   }
+
+
+The text view uses TextNode as its core data structure. It is derived from and refers
+to node in NodePool (L9) for extra information.
+
